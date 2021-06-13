@@ -4,7 +4,8 @@
   {{userData.value | json}}
   {{userModel.name}}
 
-  <input type="text" name="name" [(ngModel)]="userModel.name">
+  <input type="text" required #name1="ngModel" name="name" [(ngModel)]="userModel.name">
+  <small [class.d-none]="name1.valid || name1.untouched">Name is required</small>
   <div ngModelGroup="address">
     <input type="text" name="houseNumber" ngModel>
     <input type="text" name="street" ngModel>
