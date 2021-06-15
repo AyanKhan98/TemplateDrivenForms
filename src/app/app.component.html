@@ -12,6 +12,7 @@
     <input type="text" name="city" ngModel>
     <input type="text" name="Zip" ngModel>
   </div>
+  <button [disabled]="userData.form.invalid" class="btn btn-primary" (click)="onSubmit()">Submit</button>
   
 </form>
 </div>
